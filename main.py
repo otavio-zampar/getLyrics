@@ -2,6 +2,12 @@ import tkinter as tk
 from tkinter import filedialog
 from getLyrics import getLyrics
 
+required_packages = {
+    "googlesearch-python": "1.2.3",
+    "urllib3": "2.2.1",
+    "mutagen": "1.47.0"
+}
+
 def selecionar_arquivo():
     filepath = filedialog.askopenfilename(filetypes=[("Arquivos MP3", "*.mp3")])
     if filepath:
