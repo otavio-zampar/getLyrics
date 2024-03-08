@@ -1,7 +1,7 @@
 from googlesearch import search
 
 def searchWeb(song, artist, extra):
-    a = search(f"{artist} {song} {extra} genius lyrics", num_results=1)
+    a = search(f"genius {artist} {song} {extra} lyrics", num_results=1)
     return next(a)
 
 def find_all(a_str, subStart, subEnd):

@@ -18,10 +18,15 @@ def getLyrics(file_path, change, extra):
             if key == "TPE1":
                 artista = value
 
+    # if artista == "":
+    #     a
+    # if nome == "":
+    #     b
+
     url = searchWeb(nome, artista, extra)
     lyrics = scrubLyrics(url)
 
-    if change.get():
+    if change == True:
         print("Adicionado letras!")
         audio["USLT::   "] = USLT(encoding=3, lang='eng', desc='desc', text=lyrics)
         audio.save(file_path)

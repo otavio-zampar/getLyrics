@@ -11,7 +11,7 @@ required_packages = {
 def selecionar_arquivo():
     filepath = filedialog.askopenfilename(filetypes=[("Arquivos MP3", "*.mp3")])
     if filepath:
-        [lyrics, nome, artista] = getLyrics(filepath, change, extraEntry.get())
+        [lyrics, nome, artista] = getLyrics(filepath, change.get(), extraEntry.get())
         labelNomeAutor.config(text=f"{nome} - {artista}")
         text_lyrics.config(state=tk.NORMAL)
         text_lyrics.delete('1.0', tk.END)

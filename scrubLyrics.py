@@ -21,12 +21,4 @@ def scrubLyrics(url):
     all_lyrics = all_lyrics[:-1]
     all_lyrics = sub(r'<br/>', '\n', all_lyrics)
     cleaned_string = sub(r'<[^>]+>', '', all_lyrics)
-
-    # file = url[url.rfind("/")+1:]+".txt"
-    # if os.path.exists(file):
-    #     os.remove(file)
-    # with open("./"+file, 'a', encoding='utf-8') as input_file:
-    #     input_file.write(cleaned_string)
-    # input_file.close()
-
     return cleaned_string
